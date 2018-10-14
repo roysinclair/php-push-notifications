@@ -1,0 +1,144 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "8f2093d4-d894-4c17-8de8-6a4c50f94d63",
+      "lastModified": "2018-10-14T12:19:56.941+02:00",
+      "name": "Demo Push Notifications"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"request\":\"register\",\n\"deviceToken\":\"Android-Device-Token\",\n\"appVersion\":\"1\",\n\"appOS\":\"ANDROID\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost",
+        "path": "/demo-push-notifications/users.php"
+      },
+      "description": "Register a user to push notifications",
+      "id": "b91d38e3-a861-4471-bcac-eaffae2a140b",
+      "lastModified": "2018-10-14T12:19:56.941+02:00",
+      "name": "Register User",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "8f2093d4-d894-4c17-8de8-6a4c50f94d63"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"request\":\"All\",\n\"title\":\"Android title\",\n\"message\":\"Hello world\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost",
+        "path": "/demo-push-notifications/push.php"
+      },
+      "description": "Send a push notification to all registered users\n",
+      "id": "19ae5fe0-fc0d-492f-a7a7-c80d347cd5db",
+      "lastModified": "2018-10-14T12:19:45.428+02:00",
+      "name": "Test push to All users",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "8f2093d4-d894-4c17-8de8-6a4c50f94d63"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n\"request\":\"iOS\",\n\"message\":\"Hello world\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost",
+        "path": "/demo-push-notifications/push.php"
+      },
+      "description": "Send a push notification to all registered iOS users\n",
+      "id": "b6f6f095-b98c-4059-919b-fcdd4c103f18",
+      "lastModified": "2018-10-14T12:19:55.559+02:00",
+      "name": "Test push to iOS",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "8f2093d4-d894-4c17-8de8-6a4c50f94d63"
+    }
+  ]
+}
